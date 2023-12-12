@@ -6,11 +6,27 @@
 /*   By: dgomez-m <aecm.davidgomez@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 04:11:06 by dgomez-m          #+#    #+#             */
-/*   Updated: 2023/12/01 04:17:11 by dgomez-m         ###   ########.fr       */
+/*   Updated: 2023/12/12 17:03:53 by dgomez-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_strndup(const char *s1, size_t n)
+{
+	size_t	len;
+	char	*str;
+
+	len = 0;
+	while (len < n && s1[len] != '\0')
+		len++;
+	str = ft_calloc(sizeof(char), len + 1);
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s1, len);
+	str[len] = '\0';
+	return (str);
+}
 
 static int	ft_getnumberstrings(char const *s, char c)
 {
@@ -50,13 +66,6 @@ static int	ft_getlenstrings(char const *s, char c)
 	return (lenstr);
 }
 
-static void	ft_free(char **substrings, int index)
-{
-	while (index > 0)
-		free(substrings[--index]);
-	free(substrings);
-}
-
 static int	ft_get_substrings(char const *s, char c, char **substrings,
 		int num_str)
 {
@@ -91,7 +100,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	if (!ft_get_substrings(s, c, substrings, num_str))
 	{
-		ft_free(substrings, num_str);
+		while (num_str > 0)
+			free(substrings[--num_str]);
+		free(substrings);
 		return (NULL);
 	}
 	substrings[num_str] = NULL;
