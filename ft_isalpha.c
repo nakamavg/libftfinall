@@ -6,11 +6,9 @@
 /*   By: dgomez-m <aecm.davidgomez@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 02:27:30 by nakama            #+#    #+#             */
-/*   Updated: 2023/11/26 04:52:20 by dgomez-m         ###   ########.fr       */
+/*   Updated: 2023/12/13 00:36:55 by dgomez-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

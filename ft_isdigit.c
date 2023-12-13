@@ -6,11 +6,9 @@
 /*   By: dgomez-m <aecm.davidgomez@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 04:37:43 by nakama            #+#    #+#             */
-/*   Updated: 2023/11/26 04:52:20 by dgomez-m         ###   ########.fr       */
+/*   Updated: 2023/12/13 00:37:12 by dgomez-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

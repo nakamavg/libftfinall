@@ -6,11 +6,9 @@
 /*   By: dgomez-m <aecm.davidgomez@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 13:51:09 by dgomez-m          #+#    #+#             */
-/*   Updated: 2023/11/26 04:52:20 by dgomez-m         ###   ########.fr       */
+/*   Updated: 2023/12/13 00:37:04 by dgomez-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_iscntrl(int c)
 {
