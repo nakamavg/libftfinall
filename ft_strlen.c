@@ -6,7 +6,7 @@
 /*   By: dgomez-m <aecm.davidgomez@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 00:47:30 by nakama            #+#    #+#             */
-/*   Updated: 2023/11/26 04:52:20 by dgomez-m         ###   ########.fr       */
+/*   Updated: 2023/12/14 13:15:18 by dgomez-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlen( const char *s)
 
 	x = 0;
 	while (s[x] != '\0')
-	{
 		x++;
-	}
 	return (x);
 }
