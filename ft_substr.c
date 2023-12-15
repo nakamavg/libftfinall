@@ -6,7 +6,7 @@
 /*   By: dgomez-m <aecm.davidgomez@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 18:15:21 by dgomez-m          #+#    #+#             */
-/*   Updated: 2023/11/28 21:30:02 by dgomez-m         ###   ########.fr       */
+/*   Updated: 2023/12/15 04:23:15 by dgomez-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*newstring;
+	char	*new_string;
 	size_t	slen;
 
 	if (!s)
@@ -24,10 +24,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
-	newstring = (char *)ft_calloc((len + 1), sizeof(char));
-	if (!newstring)
+	new_string = (char *)ft_calloc((len + 1), sizeof(char));
+	if (!new_string)
 		return (NULL);
-	ft_memcpy(newstring, (void *)(s + start), len);
-	newstring[len] = '\0';
-	return (newstring);
+	ft_memcpy(new_string, (void *)(s + start), len);
+	new_string[len] = '\0';
+	return (new_string);
 }
